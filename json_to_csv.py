@@ -1,7 +1,7 @@
 import json
 import csv
 
-with open("clima_medellin_2022.json") as f:
+with open("./clima_medellin_2022.json") as f:
     data = json.load(f)
 
 with open("clima_medellin_2022.csv", "w", newline="") as csvfile:
