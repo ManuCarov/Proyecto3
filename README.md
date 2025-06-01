@@ -221,7 +221,9 @@ Finalmente, se descarga el archivo desde HDFS al sistema local y luego se carga 
 
 ## Ejecución de la API
 
-### 1. Crear un entorno virtual e instalar los requerimientos
+### Método 1: Local
+
+#### 1. Crear un entorno virtual e instalar los requerimientos
 
 ```bash
 python -m venv env
@@ -230,15 +232,45 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Ejecutar el servidor localmente
+#### 2. Ejecutar el servidor localmente
 
 ```bash
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
+
 El parámetro `--reload` reinicia automáticamente el servidor al detectar cambios en el código (útil para desarrollo).
 
-### 3. Rutas disponibles
+#### 3. Rutas disponibles
 
 - [`/archivo`](http://localhost:8000/archivo) → Interfaz web con tabla de datos.
 - [`/api/datos`](http://localhost:8000/api/datos) → Datos en formato JSON.
+
+### Método 2: Nodo del Clúster 
+
+#### 1. App.py
+
+Dentro del EMR, en la ubicación del archivo .csv, se crea app.py
+
+```bash
+nano app.py
+```
+
+#### 2. Se pega el código app.py 
+**Guardar**: `Ctrl + o`
+**Salit**: `Ctrl + x`
+
+#### 3. Instalar Flask
+
+```bash
+pip install flask
+```
+
+#### 4. Se ejecuta
+
+```bash
+python app.py
+```
+
+#### 4. Se prueba
+**URL**: `http://<ip-de-tu-emr>:5000/csv`
