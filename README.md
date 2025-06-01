@@ -114,6 +114,7 @@ application.
 
 - **EC2 Key pair**:
   - Selecciona la llave SSH existente (por ejemplo: `emr-key.pem`) para acceder al clúster.
+  - Mucho mejor crear una llave .pem, se recomienda para evitar errores.
 
 - **IAM Roles**:
   - **Service Role**: `EMR_DefaultRole`
