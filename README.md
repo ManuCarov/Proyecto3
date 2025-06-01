@@ -218,3 +218,26 @@ aws s3 cp salida_promedio_temp.csv s3://<tu-bucket>/data/salida_promedio_temp.cs
 ```
 Finalmente, se descarga el archivo desde HDFS al sistema local y luego se carga al bucket S3 en la carpeta `data`.
 
+## Ejecución de la API
+
+### 1. Crear un entorno virtual e instalar los requerimientos
+
+```bash
+python -m venv env
+source env/bin/activate
+
+pip install -r requirements.txt
+```
+
+### 2. Ejecutar el servidor localmente
+
+```bash
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
+```
+
+El parámetro `--reload` reinicia automáticamente el servidor al detectar cambios en el código (útil para desarrollo).
+
+### 3. Rutas disponibles
+
+- [`/archivo`](http://localhost:8000/archivo) → Interfaz web con tabla de datos.
+- [`/api/datos`](http://localhost:8000/api/datos) → Datos en formato JSON.
