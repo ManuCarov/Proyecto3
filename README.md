@@ -258,7 +258,8 @@ nano app.py
 
 #### 2. Se pega el código app.py 
 **Guardar**: `Ctrl + o`
-**Salit**: `Ctrl + x`
+
+**Salir**: `Ctrl + x`
 
 #### 3. Instalar Flask
 
