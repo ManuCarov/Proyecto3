@@ -5,6 +5,10 @@
 ### ¿De donde proviene?
 Los datos provienen de la API de Open-Meteo y corresponden al clima diario en Medellín durante 2022. El archivo `clima_medellin_2022.csv` contiene columnas de fecha, temperatura máxima diaria y precipitación acumulada.
 
+```bash
+curl "https://archive-api.open-meteo.com/v1/archive?latitude=6.25&longitude=-75.56&start_date=2022-01-01&end_date=2022-12-31&daily=temperature_2m_max,precipitation_sum&timezone=America/Bogota" -o clima2022.json
+```
+
 ### ¿Por qué estos datos?
 Elegimos este dataset porque permite aplicar MapReduce para conteos, promedios mensuales y detección de tendencias climáticas en un entorno real.
 
