@@ -271,11 +271,24 @@ nano app.py
 pip install flask
 ```
 
-#### 4. Se ejecuta
+#### 4. Creación del puerto 5000
+
+1. Dentro de la Instancia master del Cluster. Vamos a Seguridad > Grupos de seguridad > Editar reglas de entrada
+2. Se agregar una nueva regla con las siguientes condiciones:
+ - **Type**: `TCP Personalizado`
+ - **Source**: `Anywhere (0.0.0.0/0)`
+ - **Port**: `5000`
+
+#### 5. Se ejecuta
+
+Volvemos a la terminar y ejecutamos el código
 
 ```bash
 python app.py
 ```
 
-#### 4. Se prueba
+#### 6. Se prueba
+
+Copiamos la IP pública de la instancia master del cluster y buscamos el siguiente link donde se mirarán los datos.
+
 **URL**: `http://<ip-de-tu-emr>:5000/csv`
