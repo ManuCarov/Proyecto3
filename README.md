@@ -221,7 +221,7 @@ Finalmente, se descarga el archivo desde HDFS al sistema local y luego se carga 
 
 ## Ejecución de la API
 
-### Método 1: Local
+### Método 1: FastApi
 
 #### 1. Crear un entorno virtual e instalar los requerimientos
 
@@ -246,7 +246,7 @@ El parámetro `--reload` reinicia automáticamente el servidor al detectar cambi
 - [`/archivo`](http://localhost:8000/archivo) → Interfaz web con tabla de datos.
 - [`/api/datos`](http://localhost:8000/api/datos) → Datos en formato JSON.
 
-### Método 2: Nodo del Clúster 
+### Método 2: Flask
 
 #### 1. App.py
 
